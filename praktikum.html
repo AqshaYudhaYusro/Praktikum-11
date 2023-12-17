@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praktikum11</title>
+    <style>
+        .result1{
+            border-radius: 3px;
+        }
+        .variabel1{
+            border-style: none;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr><td class="variabel1"><input type="number" name="variabel1" id="variabel1" onkeydown="handleKeyPress(event)" onchange="inputvariabel1()" ></td></tr>
+        <tr><td class="variabel1">+</td></tr>
+        <th class="variabel1"><input type="number" name="variabel2" id="variabel2" onkeydown="handleKeyPress(event)" onchange="inputvariabel1()"></th>
+        <tr><td class="variabel1">=</td></tr>
+        <tr><th class="result1"><span id="result"></span></th></tr>
+    </table>
+    <script>
+        function inputvariabel1() {
+            let variabel1 = parseInt(document.getElementById("variabel1").value);
+            let variabel2 = parseInt(document.getElementById("variabel2").value);
+            let result = variabel1 + variabel2;
+
+            document.getElementById("result").innerText=result;
+
+        }
+    </script>
+</body>
+</html>
